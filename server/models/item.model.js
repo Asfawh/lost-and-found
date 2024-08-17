@@ -7,24 +7,27 @@ const ItemSchema = new Schema(
             minlength: [3, "Item name must be at least 3 characters long!"],
             maxlength: [20, "Item name must be less than 20 characters long"]
         },
-        misplacedDate: {
+        timestamp: {
             type: Date,
-            required: [true, "Misplaced date required!"],
-            // min: [2, "Misplaced date must be at least 1 minutes!"]
+            required: [true, "Date required!"],
         },
         location: {
             type: String,
-            required: [true, "Misplaced location is required!"],
-            minlength: [10, "Misplaced location must be at least 10 characters long!"],
+            required: [true, "Location is required!"],
         },
-        discription: {
-            type: String
+        markItem: {
+            type: String,
+            required: [true, "markItem is required!"],
+        },
+        description: {
+            type: String,
+            required: [true, "Description is required!"],
         },
         image: {
-            type: String
+            type: String,
         },
-        note: {
-            type: String
+        contact: {
+            type: String,
         },
     },
     { timestamps: true }
