@@ -14,6 +14,16 @@ function Details() {
     setItem((prev) => prev.filter((item) => id != item._id));
   };
 
+  // Convert the string to a Date object
+  const dateObject = new Date(item.timestamp);
+
+  // Format the date (for example: "August 30, 2024")
+  const formattedDate = dateObject.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
   useEffect(() => {
     axios
       .get(`${baseUrl}/${id}`)
@@ -43,7 +53,7 @@ function Details() {
             <p className="mb-3">
               <strong>Location:</strong> {item.location}
             </p>
-            <p className="mb-3"> TimeStamp: {item.timestamp}</p>
+            <p className="mb-3"> TimeStamp: {formattedDate}</p>
             <p className="mb-3"> Item was: {item.markItem}</p>
             <p className="mb-3"> Contact Info: {item.contact}</p>
           </div>

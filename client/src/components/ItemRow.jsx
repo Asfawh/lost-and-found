@@ -17,11 +17,11 @@ function ItemRow({ item, setIsLoaded }) {
   return (
     <tr>
       <td className="align-middle">{item.itemName}</td>
-      <td className="align-middle">{item.location}</td>
-      <td className="align-middle">{formattedDate}</td>
-
       <td className="align-middle">{item.markItem}</td>
-      <td className="align-middle">
+      <td className="align-middle">{formattedDate}</td>
+      <td className="align-middle">{item.location}</td>
+
+      <td className="align-middle d-flex gap-2">
         <Link to={`/items/${item._id}`} className="btn btn-info align-middle ">
           Details
         </Link>{" "}

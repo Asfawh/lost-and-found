@@ -10,9 +10,9 @@ function ItemsList({ items, setIsLoaded }) {
           <thead>
             <tr>
               <th>Name:</th>
-              <th>Location:</th>
-              <th>Date:</th>
               <th>Catagory:</th>
+              <th>Date:</th>
+              <th>Location:</th>
               <th>Action:</th>
             </tr>
           </thead>

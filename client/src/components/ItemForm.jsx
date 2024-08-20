@@ -55,7 +55,7 @@ const ItemForm = ({ setIsLoaded }) => {
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <fieldset>
-              <legend className="fs-6">LOST/FOUND:</legend>
+              <legend className="fs-6">Item:</legend>
               <div className="d-flex justify-content-around">
                 <div className="form-check">
                   <input
