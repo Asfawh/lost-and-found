@@ -2,7 +2,7 @@ import axios from "axios";
 import { Fragment, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import ITEM_SERVICE from "../services/item.service";
-import NavBar from "../components/NavBar";
+// import NavBar from "../components/NavBar";
 
 function Details() {
   const { id } = useParams();

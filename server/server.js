@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import dbConnect from './config/mongoose.config.js';
 import itemRoute from './routes/item.routes.js'
+import userRouter from './routes/user-routes.js';
 
 
 //pulling env vars
@@ -13,7 +14,10 @@ const app = express();
 
 //attach middleware to our express service
 app.use(express.json(), cors());
-app.use('/api', itemRoute)
+
+/* direct user api routes to user router */
+app.use('/api/users', userRouter);
+app.use('/api/items', itemRoute)
 
 
 async function serverStart(){

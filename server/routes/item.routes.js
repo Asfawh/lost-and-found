@@ -3,13 +3,12 @@ import { createItem, getOneItem, getAllItem, getItemByMisplacedDate, updateOneIt
 
 const router = Router()
 
-router.route('/items')
+router.route('/')
     .get( getAllItem )
     .post( createItem )
 
-// router.route('/items/misplacedDate')
 
-router.route('/items/:id')
+router.route('/:id')
     .get( getOneItem )
     .put( updateOneItem )
     .delete(deleteOneItem)
