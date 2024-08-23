@@ -4,6 +4,9 @@ import { Link, useParams } from "react-router-dom";
 import ITEM_SERVICE from "../services/item.service";
 // import NavBar from "../components/NavBar";
 
+import Card from "react-bootstrap/Card";
+import Figure from "react-bootstrap/Figure";
+
 function Details() {
   const { id } = useParams();
   const [item, setItem] = useState({});
@@ -34,7 +37,12 @@ function Details() {
   return (
     <Fragment>
       {/* <NavBar disnN={item.itemName} /> */}
-      <p className="text-center mt-3">{item.itemName}</p>
+      <p className="text-center mt-3">
+        <strong>
+          {" "}
+          {item.itemName} {item.markItem}
+        </strong>
+      </p>
       <div className="card-footer text-end mb-3">
         <Link
           to={`/items/`}
@@ -45,19 +53,25 @@ function Details() {
         </Link>
       </div>
       {item && (
-        <div className="card ">
-          <div className="card-body">
-            <p className="mb-3">
-              <strong>Description:</strong> {item.description}
-            </p>
-            <p className="mb-3">
-              <strong>Location:</strong> {item.location}
-            </p>
-            <p className="mb-3"> TimeStamp: {formattedDate}</p>
-            <p className="mb-3"> Item was: {item.markItem}</p>
-            <p className="mb-3"> Contact Info: {item.contact}</p>
-          </div>
-        </div>
+        <Card bg="light" text="dark" className="shadow">
+          <Card.Body>
+            <Figure>
+              <p className="mb-3">
+                <strong>Description:</strong> {item.description}
+              </p>
+              <p className="mb-3">
+                <strong>Location:</strong> {item.location}
+              </p>
+              <p className="mb-3">
+                {" "}
+                <strong>TimeStamp:</strong> {formattedDate}
+              </p>
+              <p className="mb-3">
+                <strong> Contact Info:</strong> {item.contact}
+              </p>
+            </Figure>
+          </Card.Body>
+        </Card>
       )}
     </Fragment>
   );

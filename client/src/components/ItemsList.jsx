@@ -3,8 +3,8 @@ import MealRow from "./ItemRow";
 function ItemsList({ items, setIsLoaded }) {
   return (
     <div className="card shadow ">
-      <h3 className="card-header text-center">All Items List</h3>
-      <p className="text-center mt-3">Find Lost or Found items!</p>
+      <h3 className="card-header text-center">List All</h3>
+      <p className="text-center mt-3">Find Lost or Found Hub!</p>
       <div className="card-body">
         <table className="table table-striped">
           <thead>

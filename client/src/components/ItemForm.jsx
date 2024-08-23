@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import ITEM_SERVICE from "../services/item.service";
+import AddressAutocomplete from "./AddressAutocomplete.jsx";
 
 const initialItem = {
   itemName: "",
@@ -49,13 +50,13 @@ const ItemForm = ({ setIsLoaded }) => {
 
   return (
     <div className="card shadow">
-      <h3 className="card-header text-center"> Item Form</h3>
-      <p className="text-center mt-3">Add Item!</p>
+      <h3 className="card-header text-center"> Create Form</h3>
+      <p className="text-center mt-3">Add new!</p>
       <div className="card-body">
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <fieldset>
-              <legend className="fs-6">Item:</legend>
+              <legend className="fs-6">Mark:</legend>
               <div className="d-flex justify-content-around">
                 <div className="form-check">
                   <input
@@ -93,7 +94,7 @@ const ItemForm = ({ setIsLoaded }) => {
               <p className="error">{errors.itemName.message}</p>
             )}
             <label htmlFor="itemName" className="form-label">
-              Item Name:
+              Name:
             </label>
             <input
               type="text"
@@ -136,6 +137,7 @@ const ItemForm = ({ setIsLoaded }) => {
               className="form-control"
               onChange={handleChange}
             />
+            {/* <AddressAutocomplete /> */}
           </div>
           <div className="mb-3">
             {errors.timestamp && (
@@ -182,7 +184,7 @@ const ItemForm = ({ setIsLoaded }) => {
           </div>
           <div className="text-end">
             <button type="submit" className="btn btn-primary">
-              Add Item!
+              Create!
             </button>
           </div>
         </form>

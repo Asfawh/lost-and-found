@@ -49,8 +49,8 @@ const UpdateItemForm = () => {
 
   return (
     <div className="card shadow">
-      <h3 className="card-header text-center"> Item Form</h3>
-      <p className="text-center mt-3">Edit Item!</p>
+      <h3 className="card-header text-center"> Update Form</h3>
+      <p className="text-center mt-3">Make sure you upadate properly!</p>
       <div className="card-body">
         <form onSubmit={handleSubmit}>
           <div className="mb-3">

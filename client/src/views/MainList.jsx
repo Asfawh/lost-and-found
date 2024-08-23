@@ -37,19 +37,19 @@ function MainList() {
       .catch((err) => console.log(err));
   }, [isLoaded]);
 
-  let subtitle = "Login or register to roll your eyes at these horrible items.";
+  let subtitle = "Login or register for more.";
 
   if (user) {
-    subtitle = "Click the button to roll your eyes at a item!";
+    subtitle = "Click the view button for more detail and action!";
   }
 
   return (
     <Fragment>
-      <h1>All Items</h1>
+      <h1>Display All </h1>
       <h5 className="mb-4">{subtitle}</h5>
       <div className={styles.grid}>
-        {items.map((item) => (
-          <EachItem item={item} setIsLoaded={setIsLoaded} />
+        {items.map((item, i) => (
+          <EachItem key={i} item={item} setIsLoaded={setIsLoaded} />
           // <Details />
         ))}
       </div>

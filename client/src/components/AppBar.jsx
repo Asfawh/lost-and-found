@@ -26,7 +26,7 @@ function AppBar() {
           <Nav className="me-auto">
             {state.user && (
               <LinkContainer to="/items/new">
-                <Nav.Link>Add items</Nav.Link>
+                <Nav.Link>add a new</Nav.Link>
               </LinkContainer>
             )}
           </Nav>
