@@ -2,21 +2,6 @@
 node_modules/
 #Ignore .env files
 .env*
-# Ignore build artifacts
-build/
 # Ignore the .gitignore file itself
 .gitignore
-pom.xml
-pom.xml.asc
-*.jar
-*.class
-/lib/
-/classes/
-/target/
-/checkouts/
-.lein-deps-sum
-.lein-repl-history
-.lein-plugins/
-.lein-failures
-.nrepl-port
-.cpcache/
+
