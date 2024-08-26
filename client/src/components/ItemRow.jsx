@@ -29,8 +29,7 @@ function ItemRow({ item, setIsLoaded }) {
           to={`/items/${item._id}/edit`}
           className="btn btn-warning align-middle "
         >
-          {" "}
-          Edit
+          Update
         </Link>
       </td>
     </tr>

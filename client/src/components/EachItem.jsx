@@ -11,7 +11,6 @@ import { Link } from "react-router-dom";
 /* local */
 import { AuthContext } from "../context/AuthContext";
 
-// import LikeButton from "../layout-ui/LikeButton";
 import LikeButton from "./LikeButton";
 
 function EachItem({ item, setIsCurrent }) {

@@ -1,12 +1,11 @@
 # Ignore node_modules
 node_modules/
-# Ignore build artifacts
-build/
 #Ignore .env files
 .env*
+# Ignore build artifacts
+build/
 # Ignore the .gitignore file itself
 .gitignore
-
 pom.xml
 pom.xml.asc
 *.jar
