@@ -1,4 +1,4 @@
-import MealRow from "./ItemRow";
+import ItemRow from "./ItemRow";
 
 function ItemsList({ items, setIsLoaded }) {
   return (
@@ -18,7 +18,7 @@ function ItemsList({ items, setIsLoaded }) {
           </thead>
           <tbody>
             {items.map((item) => (
-              <MealRow key={item._id} item={item} setIsLoaded={setIsLoaded} />
+              <ItemRow key={item._id} item={item} setIsLoaded={setIsLoaded} />
             ))}
           </tbody>
         </table>

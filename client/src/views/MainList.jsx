@@ -40,7 +40,7 @@ function MainList() {
   let subtitle = "Login or register for more.";
 
   if (user) {
-    subtitle = "Click the view button for more detail and action!";
+    subtitle = "Click view for more detail and action!";
   }
 
   return (

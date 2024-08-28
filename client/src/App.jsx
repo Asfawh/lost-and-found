@@ -6,7 +6,7 @@ import AccountBar from "./components/AccountBar";
 
 import AuthProvider from "./context/AuthContext";
 import AppBar from "./components/AppBar";
-import NavBar from "./components/NavBar";
+// import NavBar from "./components/NavBar";
 import Main from "./views/Main";
 import Details from "./views/Details";
 import UpdateItemForm from "./views/UpdateItemForm";
